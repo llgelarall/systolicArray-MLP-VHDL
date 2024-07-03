@@ -1,0 +1,9 @@
+vsim work.systolicarray
+add wave -position insertpoint  \
+sim:/systolicarray/clk \
+sim:/systolicarray/done \
+sim:/systolicarray/reg_input \
+sim:/systolicarray/results	\
+sim:/systolicarray/start	
+force -freeze sim:/systolicarray/clk 1 0, 0 {50 ns} -r 100	
+force -freeze sim:/systolicarray/start 1 0

@@ -1,0 +1,23 @@
+vsim -voptargs=+acc work.neural_network
+add wave -position insertpoint  \
+sim:/neural_network/clk \
+sim:/neural_network/doneL1 \
+sim:/neural_network/doneL1R \
+sim:/neural_network/doneL2 \
+sim:/neural_network/doneL2R \
+sim:/neural_network/doneL3 \
+sim:/neural_network/doneL3R	\
+sim:/neural_network/h1F \
+sim:/neural_network/h2F \
+sim:/neural_network/h3F	\
+sim:/neural_network/p	\
+sim:/neural_network/Z1F \
+sim:/neural_network/Z2F \
+sim:/neural_network/Z3F \
+sim:/neural_network/mcorrect	\
+sim:/neural_network/pchange	\
+sim:/neural_network/finalDone	\
+sim:/neural_network/Final	\
+sim:/neural_network/X_Row
+force -freeze sim:/neural_network/clk 1 0, 0 {50 ns} -r 100
+
